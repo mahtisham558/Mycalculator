@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .calculator{
+            box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.251);
+            border-radius: 20px;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            background-color:  rgb(26 53 91);
+            width: 16vw;
+            margin: 0 auto;
+            border: 3px solid transparent;
+        }
+        .calculator:hover{
+            border: 3px solid whitesmoke;
+        }
+        button{
+            cursor:pointer;
+            width: 40px;
+            height: 30px;
+            margin: 0 1px;
+            font-weight: bold;
+            background-color: rgb(219, 185, 140);
+        }
+        button:hover{
+            background-color: rgb(220, 178, 124) ;
+            color:whitesmoke;
+        }
+        input.in-field,input.top-field{
+            outline: none;
+            background-color: antiquewhite;
+            border: 3px solid rgb(219, 185, 140);
+            width: 170px;
+            height: 30px;
+            margin-bottom: 20px;
+            margin-left: 33px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <div class="infield">
+            <input type="text" class="in-field" placeholder=" your History" readonly>
+            <input type="text" class="top-field" placeholder="Enter Value ">
+        </div>
+        <div class="row">
+         <button class="button-c" onclick="clearInput('')">C</button>
+        <button class="button"  onclick="appendToInput('%')">%</button>
+        <button class="button"  onclick="appendToInput('**')">**</button>
+        <button class="button"  onclick="appendToInput('/')">/</button>
+        </div>
+       <div class="row">
+        <button class="button"  onclick="appendToInput('7')">7</button>
+        <button class="button"  onclick="appendToInput('8')">8</button>
+        <button class="button"  onclick="appendToInput('9')">9</button>
+        <button class="button"  onclick="appendToInput('*')">*</button>
+       </div>
+       <div class="row">
+        <button class="button"  onclick="appendToInput('4')">4</button>
+        <button class="button"  onclick="appendToInput('5')">5</button>
+        <button class="button"  onclick="appendToInput('6')">6</button>
+        <button class="button"  onclick="appendToInput('-')">-</button>
+       </div>
+       <div class="row">
+        <button class="button"  onclick="appendToInput('1')">1</button>
+        <button class="button"  onclick="appendToInput('2')">2</button>
+        <button class="button"  onclick="appendToInput('3')">3</button>
+        <button class="button"  onclick="appendToInput('+')">+</button>
+       </div>
+       <div class="row">
+        <button class="button"  onclick="appendToInput('0')">0</button>
+        <button class="button"  onclick="appendToInput('00')">00</button>
+        <button class="button"  onclick="appendToInput('.')">.</button>
+        <button class="button-eq" onclick="calculate()">=</button>
+       </div>
+    </div>
+    <script src="calculator2.js"></script>
+</body>
+</html>
